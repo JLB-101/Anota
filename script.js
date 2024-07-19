@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('continueButton').addEventListener('click', function() {
         document.getElementById('messageScreen').style.display = 'none';
         document.getElementById('noteScreen').style.display = 'block';
+        document.getElementById('defaultOpen').click(); // Open the default tab
     });
 
     // Event listener for the menu icon
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const note = notes.find(note => note.id === noteId);
             if (note) {
                 document.getElementById('noteInput').value = note.content;
+                openTab(null, 'anotar'); // Open the "Anotar" tab when editing
             }
         }
         
@@ -62,4 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Function to handle tab navigation
+    window.openTab = function(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(tabName).style.display = "block";
+        if (evt) {
+            evt.currentTarget.style.backgroundColor = "#ccc";
+        }
+    }
+
+    // Open the default tab on page load
+    document.getElementById("defaultOpen").click();
 });
