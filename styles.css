@@ -74,6 +74,10 @@ header {
 #noteList {
     list-style: none;
     padding: 0;
+    margin: 0;
+    max-height: 200px; /* Define a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #f0f0f0; /* Optional: Add a border for better visibility */
 }
 
 #noteList li {
