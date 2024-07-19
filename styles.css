@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,8 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 720px;
     text-align: center;
 }
 
@@ -57,22 +57,21 @@ header {
 #noteMenu {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 250px;
     height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    overflow-y: auto;
 }
 
-#searchBar, #searchBarMenu {
-    width: 100%;
+#searchBar {
+    width: auto;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-#noteList, #noteListMenu {
+#noteList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -81,7 +80,7 @@ header {
     border: 1px solid #f0f0f0; /* Optional: Add a border for better visibility */
 }
 
-#noteList li, #noteListMenu li {
+#noteList li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +88,7 @@ header {
     border-bottom: 1px solid #f0f0f0;
 }
 
-#noteList li .icon, #noteListMenu li .icon {
+#noteList li .icon {
     margin-left: 10px;
     cursor: pointer;
 }
@@ -128,23 +127,31 @@ header {
     background-color: #ccc;
 }
 
-/* Show menu on larger screens */
-@media (min-width: 600px) {
-    #menuIcon {
-        display: block;
+@media (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
-    
-    #tabs {
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 320px;
+        text-align: center;
+    }
+
+    #menuIcon {
         display: none;
     }
-
-    #noteMenu {
-        display: block !important;
+    #homeIcon{
+        font-weight: bolder;
     }
-}
-
-/* Hide menu on smaller screens */
-@media (max-width: 600px) {
     .container {
         width: 100%;
         height: 100vh;
@@ -155,16 +162,5 @@ header {
     header {
         padding: 5px;
     }
-
-    #menuIcon {
-        display: none;
-    }
-    
-    #noteMenu {
-        display: none !important;
-    }
-
-    #tabs {
-        display: flex;
-    }
 }
+
