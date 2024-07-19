@@ -12,15 +12,34 @@
     <div class="container" id="welcomeScreen">
         <h1>Bem-vindo ao Bloco de Notas</h1>
         <p>Um aplicativo simples para organizar suas notas</p>
-        <button: id="startButton">Comece Agora</button:>
+        <button id="startButton">Comece ja</button>
     </div>
 
     <!-- second screen/content -->
-     <div class="container" id="messageScreen">
+    <div class="container" id="messageScreen">
         <h1>Organize suas Notas</h1>
         <p>Comece a organizar suas notas de forma eficiente</p>
-        <button: id="continueButton">Continuar</button:>
-     </div>
+        <button id="continueButton">Continuar</button>
+    </div>
+
+    <!-- third screen/content -->
+    <div class="container" id="noteScreen">
+        <header>
+            <span class="icon" id="homeIcone">&#x2302;</span>
+            <span class="icon" id="menuIcone">&#9776;</span>
+        </header>
+
+        <div id="noteContent">
+            <h2>Notas</h2>
+            <textarea id="noteInput" placeholder="Escreva sua nota aqui..."></textarea>
+            <button id="saveButton">Salver Nota</button>
+        </div>
+        <aside id="noteMenu" style="display: none;">
+            <input type="text" id="searchBar" placeholder="Pesquisar nota...">
+            <ul id="noteList"></ul>
+        </aside>
+    </div>
+
 
 </body>
 
