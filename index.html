@@ -24,10 +24,18 @@
             <span class="icon" id="homeIcon">&#x2302;</span>
             <span class="icon" id="menuIcon">&#9776;</span>
         </header>
-        <div id="noteContent">
-            <h2>Notas</h2>
-            <textarea  widht="250px" id="noteInput" placeholder="Escreva sua nota aqui..."></textarea>
+        <div id="tabs">
+            <button class="tablink" id="defaultOpen" onclick="openTab(event, 'anotar')">Anotar</button>
+            <button class="tablink" onclick="openTab(event, 'verNotas')">Ver Notas</button>
+        </div>
+        <div id="anotar" class="tabcontent">
+            <h2>Anotar</h2>
+            <textarea id="noteInput" placeholder="Escreva sua nota aqui..."></textarea>
             <button id="saveButton">Salvar Nota</button>
+        </div>
+        <div id="verNotas" class="tabcontent" style="display:none;">
+            <input type="text" id="searchBar" placeholder="Pesquisar nota...">
+            <ul id="noteList"></ul>
         </div>
         <aside id="noteMenu" style="display: none;">
             <input type="text" id="searchBar" placeholder="Pesquisar nota...">
