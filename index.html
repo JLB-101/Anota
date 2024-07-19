@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anota | anote suas ideas de forma simples!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- First screen/content -->
     <div class="container" id="welcomeScreen">
         <h1>Bem-vindo ao Bloco de Notas</h1>
         <p>Um aplicativo simples para organizar suas notas</p>
-        <button id="startButton">Comece ja</button>
+        <button id="startButton">Comece Agora</button>
     </div>
-
-    <!-- second screen/content -->
-    <div class="container" id="messageScreen">
+    
+    <div class="container" id="messageScreen" style="display: none;">
         <h1>Organize suas Notas</h1>
         <p>Comece a organizar suas notas de forma eficiente</p>
         <button id="continueButton">Continuar</button>
     </div>
-
-    <!-- third screen/content -->
-    <div class="container" id="noteScreen">
+    
+    <div class="container" id="noteScreen" style="display: none;">
         <header>
             <span class="icon" id="homeIcon">&#x2302;</span>
             <span class="icon" id="menuIcon">&#9776;</span>
         </header>
-
         <div id="noteContent">
             <h2>Notas</h2>
             <textarea id="noteInput" placeholder="Escreva sua nota aqui..."></textarea>
-            <button id="saveButton">Salver Nota</button>
+            <button id="saveButton">Salvar Nota</button>
         </div>
         <aside id="noteMenu" style="display: none;">
             <input type="text" id="searchBar" placeholder="Pesquisar nota...">
             <ul id="noteList"></ul>
         </aside>
     </div>
-
-<!-- script -->
-<script src="./script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
-
 </html>
